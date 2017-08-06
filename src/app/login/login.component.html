@@ -1,0 +1,79 @@
+<form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value, loginForm.valid)">
+<div class="container-fluid" id="main">
+		<div class="row">	    
+			<div class="col-sm-4" id="mainrow">
+				<a href="#">Family Tree</a>
+			</div>
+		</div>
+	</div>
+	<br><br>
+	<div class="container" id="signincontainer">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="col-md-2" id="signin">Sign in here</div>
+			</div>
+		</div>
+	</div>
+	<br>	
+	<div class="container" id="formcontainer">
+		
+
+		<div class="row" id="formrow">
+			<div class="col-md-12" id="email">
+				<div class="col-md-5" id="emailcol">
+					<table id="cid">
+						<tr>
+							<td>
+								<div class="group" id="group">
+									<input type="text" name="custname" formControlName="username" id="txtfname" required  />
+									<span class="bar"></span>
+									<label id="ci1">Email or phone number</label>
+									<control-messages [control]="loginForm.controls.username"></control-messages>
+								</div>
+							</td>
+						</tr>			
+					</table>
+				</div>
+			</div>
+			<br><br>
+			<div class="col-md-12" id="password">
+				<div class="col-md-5" id="passwordcol">
+					<table style="" id="cname">
+						<tr>
+							<td>
+								<div class="group">
+									<input type="password" name="custname" formControlName="password" id="txtlname" required  />
+									<span class="bar"></span>
+									<label id="cn1">Password</label>
+									<control-messages [control]="loginForm.controls.password"></control-messages>
+								</div>
+							</td>
+						</tr>			
+					</table>
+				</div>
+			</div>
+			<br><br>
+			<div class="col-md-12 text-center" id="signinbutton">				
+					<div class="col-md-4 ">
+						<button id="save" type="submit"><b>SIGN IN</b></button>
+					</div>				
+			</div>
+			<br><br>
+			<div class="col-md-12" id="fgtpwd">
+				<a >
+					<div class="col-md-4 text-center">
+						<p id="fgtpwdp" style="" (click)="forgotPassword()">Forgot your password?</p>
+					</div></a>
+				</div>
+				<div class="col-md-12 text-center" id="reg">
+					<a href="signup.html">
+						<div class="col-md-4 ">
+							<button id="save" type="submit">Don't have an account ? Create here</button>
+						</div>
+					</a>
+				</div>
+				<br><br>
+			</div>
+		</div>
+	
+ </form>
